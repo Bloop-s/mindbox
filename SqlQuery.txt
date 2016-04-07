@@ -1,5 +1,5 @@
-SELECT DISTINCT CustomerId FROM Orders
+ï»¿SELECT DISTINCT CustomerId FROM Orders
 WHERE CustomerId in (
-SELECT DISTINCT CustomerId FROM Orders WHERE ProductName = 'Ìîëîêî'
+SELECT DISTINCT CustomerId FROM Orders WHERE ProductName = 'ÐœÐ¾Ð»Ð¾ÐºÐ¾'
 Except
-SELECT DISTINCT CustomerId FROM Orders WHERE ProductName = 'Ñìåòàíà' AND PurchaiseDatetime>DATEADD(m, -1, GETDATE())
+SELECT DISTINCT CustomerId FROM Orders WHERE ProductName = 'Ð¡Ð¼ÐµÑ‚Ð°Ð½Ð°' AND PurchaiseDatetime>DATEADD(m, -1, GETDATE())
