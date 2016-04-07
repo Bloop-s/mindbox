@@ -1,0 +1,5 @@
+SELECT DISTINCT CustomerId FROM Orders
+WHERE CustomerId in (
+SELECT DISTINCT CustomerId FROM Orders WHERE ProductName = 'Молоко'
+Except
+SELECT DISTINCT CustomerId FROM Orders WHERE ProductName = 'Сметана' AND PurchaiseDatetime>DATEADD(m, -1, GETDATE())
