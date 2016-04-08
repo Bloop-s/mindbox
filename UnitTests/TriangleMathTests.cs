@@ -53,7 +53,7 @@ namespace UnitTests
         public void GetRightTriangleSquareCathetusArgs_ZeroOrNegativeSide_ExceptionThrown(double cathetus1, double cathetus2)
         {
             var ex = Assert.Throws<ArgumentException>(() => TriangleMath.GetRightTriangleSquare(cathetus1, cathetus2));
-            Assert.Throws(typeof(ArgumentException), () => TriangleMath.GetRightTriangleSquare(cathetus1, cathetus2), "Sides length must be positive.");
+            Assert.AreEqual(ex.Message, "Sides length must be positive.");
         }
 
         [TestCase(5, 5, 12.5)]
